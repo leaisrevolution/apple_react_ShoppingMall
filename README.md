@@ -31,6 +31,8 @@
         <li>{} 안에 들어갈 수 있는것은 함수만 가능</li>
         <li>state 값을 변경하는것은 권장하지 않음, state 함수 사용하여 변경</li>
         <li>deep copy 를 이용하여 값을 변경해준다. 리액트는 immutable data라는 원칙을 갖고 있음. [...변수명] = copy본</li>
+        <li>return안에는 하나의 HTML 태그만 사용 가능</li>
+        <li>컴포넌트를 만들 때는 대문자로 만들어야함</li>
     </ul>
 
 <h4>Part2</h4>
