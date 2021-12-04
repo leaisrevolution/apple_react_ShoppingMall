@@ -16,7 +16,7 @@ import './App.css';
 // return안에는 하나의 HTML 태그만 사용 가능
 
 
-function App() {
+function App() { //부모 Component
 
     let stylePosts = { color : 'white', fontSize : '30px'}
     let [title, setTitle] = useState(['레아의 데일리', '예비개발자노트', '회고']);
@@ -61,11 +61,12 @@ function App() {
                 <hr/>
             </div>
             <div className="list">
-                <h3 onClick={() => {setModal(!modal)}}>
+                <h3>
                     {title[2]} <button>💙</button> 0</h3>
                 <p>2월 17일 발행</p>
                 <hr/>
             </div>
+
 
             { //map함수 이용하기
                 title.map(function(i) {
@@ -78,11 +79,11 @@ function App() {
                 })
             }
 
-
+            <button onClick={() => {setModal(!modal)}} >열고닫기</button>
 
             {
                 modal === true
-                ? <Modal />
+                ? <Modal title={title} /> //자식 Component
                 : null //텅빈 HTML
             }
 
@@ -97,13 +98,14 @@ function App() {
 // 리액트에서는 if문을 사용할 수 없다. 삼항연산자(?,true:false)를 이용해야 한다
 // 리액트에서 UI를 만들 때는 State 데이터를 이용해야 한다
 // state는 UI의 상태도 저장이 가능하다
-// !기호는 true일 때는 false로 바꿔주고, false일 때는 true로 바꿔준다.
+// !기호는 true일 때는 false로 바꿔주고, false일 때는 true로 바꿔준다
 // for문 대신 map()를 이용하여 반복문을 사용한다
+// 부모 Component -> 자식 Component state 전송 시 작명={작명} or 자식 Component에 props. props.(state 이름)
 
-function Modal() {
+function Modal(props) { //자식 Component
     return (
         <div className="modal">
-            <h2>제목</h2>
+            <h2>제목 {props.title[0]}</h2>
             <p>날짜</p>
             <p>상세내용</p>
         </div>
