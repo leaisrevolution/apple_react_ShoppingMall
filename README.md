@@ -10,6 +10,7 @@
         <li>JSX를 이용하여 HTML 페이지 제작하기</li>
         <li>State에 데이터 저장하기</li>
         <li>버튼 기능 개발하기</li>
+        <li>블로그 굴 수정버튼 만들기</li>
         <li>Component만들기(div를 한단어로 줄이기)</li>
         <li>클릭하면 동작하는 모달창 만들기</li>
         <li>Map을 이용하여 div을 반복문으로 줄이기</li>
@@ -29,6 +30,7 @@
         <li>state를 사용하는 이유는? 웹이 App처럼 동작하게 만들고 싶어서 사용(재렌더링) 새로고침X</li>
         <li>{} 안에 들어갈 수 있는것은 함수만 가능</li>
         <li>state 값을 변경하는것은 권장하지 않음, state 함수 사용하여 변경</li>
+        <li>deep copy 를 이용하여 값을 변경해준다. 리액트는 immutable data라는 원칙을 갖고 있음. [...변수명] = copy본</li>
     </ul>
 
 <h4>Part2</h4>

@@ -12,6 +12,7 @@ import './App.css';
 // state를 사용하는 이유는? 웹이 App처럼 동작하게 만들고 싶어서 사용(재렌더링) 새로고침X
 // {} 안에 들어갈 수 있는것은 함수만 가능
 // state 값을 변경하는것은 권장하지 않음, state 함수 사용하여 변경
+// deep copy 를 이용하여 값을 변경해준다. 리액트는 immutable data라는 원칙을 갖고 있음. [...변수명] = copy본
 
 
 function App() {
@@ -19,6 +20,12 @@ function App() {
     let stylePosts = { color : 'white', fontSize : '30px'}
     let [title, setTitle] = useState(['레아의 데일리', '예비개발자노트', '회고']);
     let [heart, setHeart] = useState(0); //초기값 0
+
+    function titleChange() {
+        let newTitle = [...title]; //원본을 복사해서 사용, 복사한 데이터에 새로운 데이터 넣기 (deep copy, 값 공유 X, 서로 독립적인 값을 가지는 복사)
+        newTitle[0] = '레아의 프로그래밍 노트'
+        setTitle(newTitle);
+    }
 
     return (
         <div className="App">
@@ -28,6 +35,7 @@ function App() {
             <div className="list">
                 <h3>{title[0]} <button onClick={() => {setHeart(heart+1)}}>💙</button> {heart} </h3>
                 <p>2월 17일 발행</p>
+                <button onClick={titleChange}>클릭</button>
                 <hr/>
             </div>
             <div className="list">
