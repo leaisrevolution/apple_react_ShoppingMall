@@ -22,6 +22,7 @@ function App() { //부모 Component
     let [title, setTitle] = useState(['레아의 데일리', '예비개발자노트', '회고']);
     let [heart, setHeart] = useState(0); //초기값 0
     let [modal, setModal] = useState(false); //첫 로드시 모달창 보이지 않아야해서 기본값을 false로 설정
+    let [clickTitleNumber, setClickTitleNumber] = useState(0);
 
     // 반복문 function 만들기
     // function repetitionUi() {
@@ -50,40 +51,44 @@ function App() { //부모 Component
                 <div style={stylePosts}> 레아의 Blog</div>
             </div>
             <div className="list">
-                <h3>{title[0]} <button onClick={() => {setHeart(heart+1)}}>💙</button> {heart} </h3>
+                <h3 onClick={() => {setClickTitleNumber(0)}} >{title[0]} <button onClick={() => {setHeart(heart+1)}}>💙</button> {heart} </h3>
                 <p>2월 17일 발행</p>
                 {/* <button onClick={titleChange}>클릭</button> */}
                 <hr/>
             </div>
             <div className="list">
-                <h3>{title[1]} <button>💙</button> 0 </h3>
+                <h3 onClick={() => {setClickTitleNumber(1)}}>{title[1]} <button>💙</button> 0 </h3>
                 <p>2월 17일 발행</p>
                 <hr/>
             </div>
             <div className="list">
-                <h3>
+                <h3 onClick={() => {setClickTitleNumber(2)}}>
                     {title[2]} <button>💙</button> 0</h3>
                 <p>2월 17일 발행</p>
                 <hr/>
             </div>
 
 
-            { //map함수 이용하기
-                title.map(function(i) {
+            { //map함수 이용하기, 두번째 파라미터는 반복문이 돈다.
+                title.map(function(i, j) {
                     return (
                         <div className="list">
-                            <h3>{i} <button>💙</button> 0 </h3>
+                            <h3 onClick={() => {setClickTitleNumber(j)}} >{i} <button>💙</button> 0 </h3>
                             <p>2월 17일 발행</p>
                             <hr/>
                     </div>)
                 })
             }
 
+            <button onClick={() => {setClickTitleNumber(0)}} >버튼1</button>
+            <button onClick={() => {setClickTitleNumber(1)}} >버튼2</button>
+            <button onClick={() => {setClickTitleNumber(2)}} >버튼3</button>
+
             <button onClick={() => {setModal(!modal)}} >열고닫기</button>
 
             {
                 modal === true
-                ? <Modal title={title} /> //자식 Component
+                ? <Modal title={title} clickTitleNumber={clickTitleNumber}/> //자식 Component
                 : null //텅빈 HTML
             }
 
@@ -101,14 +106,16 @@ function App() { //부모 Component
 // !기호는 true일 때는 false로 바꿔주고, false일 때는 true로 바꿔준다
 // for문 대신 map()를 이용하여 반복문을 사용한다
 // 부모 Component -> 자식 Component state 전송 시 작명={작명} or 자식 Component에 props. props.(state 이름)
+// 함수의 두번째 파라미터는 반복문이 돈다
 
 function Modal(props) { //자식 Component
     return (
         <div className="modal">
-            <h2>제목 {props.title[0]}</h2>
+            <h2>제목 {props.title [props.clickTitleNumber]}</h2>
             <p>날짜</p>
             <p>상세내용</p>
         </div>
     )
 }
+
 export default App;
