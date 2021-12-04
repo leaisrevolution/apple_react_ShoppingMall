@@ -15,6 +15,7 @@
         <li>클릭하면 동작하는 모달창 만들기</li>
         <li>Map을 이용하여 div을 반복문으로 줄이기</li>
         <li>Props 사용하기</li>
+        <li>Props 응용하기</li>
         <li>Input1 사용자가 입력한 글 변수에 저장하기</li>
         <li>Input2 블로그 글발행 기능 만들기</li>
         <li>Class를 이용한 React 문법</li>
