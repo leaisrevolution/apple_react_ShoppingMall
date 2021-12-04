@@ -1,7 +1,5 @@
 <h1>CodingApple react</h1>
-<br>
 <h3>Shppping Mall Web Site Project</h3>
-<br>
 <h3>Project goals</h3>
 <ul>
     <li>React를 이용하여 Shopping Mall Web Site를 만들어보자</li>
