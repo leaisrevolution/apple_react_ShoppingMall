@@ -38,6 +38,8 @@
         <li>리액트에서는 if문을 사용할 수 없다. 삼항연산자(?,true:false)를 이용해야 한다</li>
         <li>리액트에서 UI를 만들 때는 State 데이터를 이용해야 한다</li>
         <li>state는 UI의 상태도 저장이 가능하다</li>
+        <li>!기호는 true일 때는 false로 바꿔주고, false일 때는 true로 바꿔준다.</li>
+        <li>for문 대신 map()를 이용하여 반복문을 사용한다</li>
     </ul>
 
 <h4>Part2</h4>
