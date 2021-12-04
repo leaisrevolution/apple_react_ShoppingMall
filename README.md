@@ -11,7 +11,7 @@
         <li>State에 데이터 저장하기</li>
         <li>버튼 기능 개발하기</li>
         <li>블로그 굴 수정버튼 만들기</li>
-        <li>Component만들기(div를 한단어로 줄이기)</li>
+        <li>Component만들기(div를 한단어로 줄이기) -> 함수로 대체</li>
         <li>클릭하면 동작하는 모달창 만들기</li>
         <li>Map을 이용하여 div을 반복문으로 줄이기</li>
         <li>Props 사용하기</li>
@@ -33,6 +33,8 @@
         <li>deep copy 를 이용하여 값을 변경해준다. 리액트는 immutable data라는 원칙을 갖고 있음. [...변수명] = copy본</li>
         <li>return안에는 하나의 HTML 태그만 사용 가능</li>
         <li>컴포넌트를 만들 때는 대문자로 만들어야함</li>
+        <li>반복적으로 사용되는 HTML, 자주 변경되는 HTML UI, 하나의 페이지를 만들 때 Component를 만드는게 좋다</li>
+        <li>상위 Component에서 만든 state를 사용하려면 props를 사용해야 한다</li>
     </ul>
 
 <h4>Part2</h4>
