@@ -2,7 +2,7 @@
 <h3>Shppping Mall Web Site Project</h3>
 <h3>Project goals</h3>
 <ul>
-    <li>React를 이용하여 Shopping Mall Web Site를 만들어보자</li>
+    <li>React의 기본 개념을 익히며 React를 이용하여 Shopping Mall Web Site를 만들어보자</li>
 </ul>
 <h3>Todo list</h3>
 <h4>Part1</h4>
