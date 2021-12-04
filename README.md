@@ -18,7 +18,7 @@
         <li>Input2 블로그 글발행 기능 만들기</li>
         <li>Class를 이용한 React 문법</li>
     </ul>
-<h4>Part1 study contents</h4>
+<h4>Part1 important point</h4>
     <ul>
         <li>React는 class대신 className을 사용한다.</li>
         <li>서버에서 가져온 데이터를 바인딩(HTML에 넣음)이 매우 쉽다 -> 그래서 리액트를 씀</li>
@@ -28,6 +28,7 @@
         <li>var [a, b] = [10, 100] a는 10, b는 100</li>
         <li>state를 사용하는 이유는? 웹이 App처럼 동작하게 만들고 싶어서 사용(재렌더링) 새로고침X</li>
         <li>{} 안에 들어갈 수 있는것은 함수만 가능</li>
+        <li>state 값을 변경하는것은 권장하지 않음, state 함수 사용하여 변경</li>
     </ul>
 
 <h4>Part2</h4>
