@@ -41,6 +41,7 @@
         <li>!기호는 true일 때는 false로 바꿔주고, false일 때는 true로 바꿔준다.</li>
         <li>for문 대신 map()를 이용하여 반복문을 사용한다</li>
         <li>부모 Component -> 자식 Component state 전송 시 작명={작명} or 자식 Component에 props. props.(state 이름)</li>
+        <li>함수의 두번째 파라미터는 반복문이 돈다</li>
     </ul>
 
 <h4>Part2</h4>
