@@ -43,6 +43,7 @@
         <li>for문 대신 map()를 이용하여 반복문을 사용한다</li>
         <li>부모 Component -> 자식 Component state 전송 시 작명={작명} or 자식 Component에 props. props.(state 이름)</li>
         <li>함수의 두번째 파라미터는 반복문이 돈다</li>
+        <li>map()으로 반복문을 돌린 HTML은 key={}가 필요하다</li>
     </ul>
 
 <h4>Part2 (쇼핑몰 기능구현) </h4>

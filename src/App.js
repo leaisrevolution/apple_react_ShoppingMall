@@ -23,6 +23,7 @@ function App() { //부모 Component
     let [heart, setHeart] = useState(0); //초기값 0
     let [modal, setModal] = useState(false); //첫 로드시 모달창 보이지 않아야해서 기본값을 false로 설정
     let [clickTitleNumber, setClickTitleNumber] = useState(0);
+    let [inputContent, setInputContent] = useState(''); //문자열 데이터는 ''
 
     // 반복문 function 만들기
     // function repetitionUi() {
@@ -72,13 +73,17 @@ function App() { //부모 Component
             { //map함수 이용하기, 두번째 파라미터는 반복문이 돈다.
                 title.map(function(i, j) {
                     return (
-                        <div className="list">
+                        <div className="list" key={j}>
                             <h3 onClick={() => {setClickTitleNumber(j)}} >{i} <button>💙</button> 0 </h3>
                             <p>2월 17일 발행</p>
                             <hr/>
                     </div>)
                 })
             }
+
+            {/* <input onChange={(e) => { setInputContent(e.target.value) }} /> */}
+
+
 
             <button onClick={() => {setClickTitleNumber(0)}} >버튼1</button>
             <button onClick={() => {setClickTitleNumber(1)}} >버튼2</button>
@@ -107,6 +112,7 @@ function App() { //부모 Component
 // for문 대신 map()를 이용하여 반복문을 사용한다
 // 부모 Component -> 자식 Component state 전송 시 작명={작명} or 자식 Component에 props. props.(state 이름)
 // 함수의 두번째 파라미터는 반복문이 돈다
+// map()으로 반복문을 돌린 HTML은 key={}가 필요하다
 
 function Modal(props) { //자식 Component
     return (
