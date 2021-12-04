@@ -50,7 +50,10 @@
 
 <h4>Part2 (쇼핑몰 기능구현) </h4>
     <ul>
-        <li></li>
+        <li>프로젝트 생성 및 Bootstrap 설치</li>
+        <li>레이아웃 디자인</li>
+        <li>import, export 사용하기</li>
+        <li>Component를 이용한 반복문</li>
     </ul>
 <h4>Part3 (실무에 필요한 부가내용)</h4>
     <ul>
