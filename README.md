@@ -35,7 +35,8 @@
         <li>컴포넌트를 만들 때는 대문자로 만들어야함</li>
         <li>반복적으로 사용되는 HTML, 자주 변경되는 HTML UI, 하나의 페이지를 만들 때 Component를 만드는게 좋다</li>
         <li>상위 Component에서 만든 state를 사용하려면 props를 사용해야 한다</li>
-        <li>상위 Component에서 만든 state를 사용하려면 props를 사용해야 한다</li>
+        <li>리액트에서는 if문을 사용할 수 없다. 삼항연산자(?,true:false)를 이용해야 한다</li>
+        <li>리액트에서 UI를 만들 때는 State 데이터를 이용해야 한다</li>
         <li>state는 UI의 상태도 저장이 가능하다</li>
     </ul>
 

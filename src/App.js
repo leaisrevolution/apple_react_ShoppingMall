@@ -21,6 +21,7 @@ function App() {
     let stylePosts = { color : 'white', fontSize : '30px'}
     let [title, setTitle] = useState(['레아의 데일리', '예비개발자노트', '회고']);
     let [heart, setHeart] = useState(0); //초기값 0
+    let [modal, setModal] = useState(false); //첫 로드시 모달창 보이지 않아야해서 기본값을 false로 설정
 
     // function titleChange() {
     //     let newTitle = [...title]; //원본을 복사해서 사용, 복사한 데이터에 새로운 데이터 넣기 (deep copy, 값 공유 X, 서로 독립적인 값을 가지는 복사)
@@ -45,12 +46,17 @@ function App() {
                 <hr/>
             </div>
             <div className="list">
-                <h3>{title[2]} <button>💙</button> 1</h3>
+                <h3 onClick={() => {setModal(true)}}>
+                    {title[2]} <button>💙</button> 1</h3>
                 <p>2월 17일 발행</p>
                 <hr/>
             </div>
 
-            <Modal />
+            {
+                modal === true
+                ? <Modal />
+                : null //텅빈 HTML
+            }
 
         </div>
     );
@@ -60,6 +66,9 @@ function App() {
 // 의미없는 div를 사용하기 싫을 때는 <> </>를 사용
 // 반복적으로 사용되는 HTML, 자주 변경되는 HTML UI, 하나의 페이지를 만들 때 Component를 만드는게 좋다
 // 상위 Component에서 만든 state를 사용하려면 props를 사용해야 한다
+// 리액트에서는 if문을 사용할 수 없다. 삼항연산자(?,true:false)를 이용해야 한다
+// 리액트에서 UI를 만들 때는 State 데이터를 이용해야 한다
+// state는 UI의 상태도 저장이 가능하다
 
 function Modal() {
     return (
