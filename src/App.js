@@ -85,9 +85,18 @@ function App() { //부모 Component
 
 
 
-            <button onClick={() => {setClickTitleNumber(0)}} >버튼1</button>
+            {/* <button onClick={() => {setClickTitleNumber(0)}} >버튼1</button>
             <button onClick={() => {setClickTitleNumber(1)}} >버튼2</button>
-            <button onClick={() => {setClickTitleNumber(2)}} >버튼3</button>
+            <button onClick={() => {setClickTitleNumber(2)}} >버튼3</button> */}
+
+            <div className="publish">
+                <input onChange={(e) => {setInputContent(e.target.value)}} />
+                <button onClick={() => {
+                    let arrayCopy = [...title]; //title복사
+                    arrayCopy.unshift(inputContent); //title 맨 앞에 입력값 추가
+                    setTitle(arrayCopy); //타이틀값 복사된 title 값 넣기
+                }}>저장</button>
+            </div>
 
             <button onClick={() => {setModal(!modal)}} >열고닫기</button>
 
@@ -113,6 +122,7 @@ function App() { //부모 Component
 // 부모 Component -> 자식 Component state 전송 시 작명={작명} or 자식 Component에 props. props.(state 이름)
 // 함수의 두번째 파라미터는 반복문이 돈다
 // map()으로 반복문을 돌린 HTML은 key={}가 필요하다
+// unshift() : array 맨 앞에 자료를 추가해주는 문법
 
 function Modal(props) { //자식 Component
     return (

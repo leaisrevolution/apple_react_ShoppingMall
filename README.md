@@ -44,6 +44,7 @@
         <li>부모 Component -> 자식 Component state 전송 시 작명={작명} or 자식 Component에 props. props.(state 이름)</li>
         <li>함수의 두번째 파라미터는 반복문이 돈다</li>
         <li>map()으로 반복문을 돌린 HTML은 key={}가 필요하다</li>
+        <li>unshift() : array 맨 앞에 자료를 추가해주는 문법</li>
     </ul>
 
 <h4>Part2 (쇼핑몰 기능구현) </h4>
