@@ -5,7 +5,7 @@
     <li>React의 기본 개념을 익히며 React를 이용하여 Shopping Mall Web Site를 만들어보자</li>
 </ul>
 <h3>Todo list</h3>
-<h4>Part1</h4>
+<h4>Part1 (블로그 기능구현) </h4>
     <ul>
         <li>JSX를 이용하여 HTML 페이지 제작하기</li>
         <li>State에 데이터 저장하기</li>
