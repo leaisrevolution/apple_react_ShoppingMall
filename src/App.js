@@ -23,6 +23,21 @@ function App() {
     let [heart, setHeart] = useState(0); //초기값 0
     let [modal, setModal] = useState(false); //첫 로드시 모달창 보이지 않아야해서 기본값을 false로 설정
 
+    // 반복문 function 만들기
+    // function repetitionUi() {
+
+    //     let array = [];
+    //     for (var i = 0; i < 3; i++) {
+    //         array.push(<div>안녕</div>)
+    //     }
+    //     return array
+    // }
+
+    // let array = [2, 3, 4];
+    // array.map(function(a){ //array 데이터를 a에 넣어줌
+    //     return a * 2
+    // });
+
     // function titleChange() {
     //     let newTitle = [...title]; //원본을 복사해서 사용, 복사한 데이터에 새로운 데이터 넣기 (deep copy, 값 공유 X, 서로 독립적인 값을 가지는 복사)
     //     newTitle[0] = '레아의 프로그래밍 노트'
@@ -46,11 +61,24 @@ function App() {
                 <hr/>
             </div>
             <div className="list">
-                <h3 onClick={() => {setModal(true)}}>
-                    {title[2]} <button>💙</button> 1</h3>
+                <h3 onClick={() => {setModal(!modal)}}>
+                    {title[2]} <button>💙</button> 0</h3>
                 <p>2월 17일 발행</p>
                 <hr/>
             </div>
+
+            { //map함수 이용하기
+                title.map(function(i) {
+                    return (
+                        <div className="list">
+                            <h3>{i} <button>💙</button> 0 </h3>
+                            <p>2월 17일 발행</p>
+                            <hr/>
+                    </div>)
+                })
+            }
+
+
 
             {
                 modal === true
@@ -69,6 +97,8 @@ function App() {
 // 리액트에서는 if문을 사용할 수 없다. 삼항연산자(?,true:false)를 이용해야 한다
 // 리액트에서 UI를 만들 때는 State 데이터를 이용해야 한다
 // state는 UI의 상태도 저장이 가능하다
+// !기호는 true일 때는 false로 바꿔주고, false일 때는 true로 바꿔준다.
+// for문 대신 map()를 이용하여 반복문을 사용한다
 
 function Modal() {
     return (
