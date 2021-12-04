@@ -123,6 +123,7 @@ function App() { //부모 Component
 // 함수의 두번째 파라미터는 반복문이 돈다
 // map()으로 반복문을 돌린 HTML은 key={}가 필요하다
 // unshift() : array 맨 앞에 자료를 추가해주는 문법
+// class는 변수와 함수의 덩어리
 
 function Modal(props) { //자식 Component
     return (
@@ -133,5 +134,6 @@ function Modal(props) { //자식 Component
         </div>
     )
 }
+
 
 export default App;
