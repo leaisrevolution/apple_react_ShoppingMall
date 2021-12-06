@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.jumbotron {
+    width: 100%;
+    height: 400px;
+    background-image: url('./background.jpeg');
+    background-size: cover;
+    color: white;
+    background-color: rgb(224, 226, 226);
+    position: relative;
+
+}
+
+
+.display-4,
+.lead,
+.my-4,
+.subLead {
+
+    text-align: center;
+}
+
+
+
+.btn{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

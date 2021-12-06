@@ -16,8 +16,27 @@ function App() {
             </Container>
             </Navbar>
 
-            <div>
+            <div className="jumbotron">
+                <div className="content">
+                    <h1 className="display-4">Hello, world!</h1>
+                    <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <hr className="my-4" />
+                    <p className="subLead">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                </div>
+                <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
             </div>
+
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-4">
+                        <img src="./shoes1.jpeg" alt="" />
+                    </div>
+                    <div className="col-md-4">2</div>
+                    <div className="col-md-4">3</div>
+                </div>
+            </div>
+
+
 
 
         </>
