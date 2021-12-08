@@ -55,6 +55,15 @@
         <li>import, export 사용하기</li>
         <li>Component를 이용한 반복문</li>
     </ul>
+
+<h4>Part2 important point</h4>
+    <ul>
+        <li>코드가 길어질 경우, 파일을 생성해 export로 불어와준다.</li>
+    </ul>
+
+
+
+
 <h4>Part3 (실무에 필요한 부가내용)</h4>
     <ul>
         <li></li>
