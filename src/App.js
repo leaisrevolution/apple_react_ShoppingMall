@@ -1,11 +1,14 @@
+/* eslint-disable */
+
 import React, {useState} from 'react';
 import './App.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import Data from './data';
 
+
 function App() {
 
-    let [shoes, setShoes] = useState(Data);
+    let [shoes, setShoes] = useState(Data); //shoes 안에 Data 컴포넌트를 넣어줌
     return (
         <>
             <Navbar bg="dark" variant="dark">
@@ -31,12 +34,23 @@ function App() {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-md-4">
-                        <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-                        <h4>{shoes[0].title}</h4>
-                        <p>{shoes[0].content} & {shoes[0].price} </p>
-                    </div>
-                    <div className="col-md-4">
+                    { //shoes 갯수 만큼 map을 돌려주세요.
+                        shoes.map((a, i)=>{
+                            return <Card shoes={shoes[i]} i={i}/>
+                        })
+                    }
+
+                    {/* a는 하나하나의 데이터를 의미, i는 반복문 돌 때 0,1,2,3,4 정수 */
+                    /*Card shoes={a} = Card shoes[i] */}
+
+                    {/* 아래의 코드를 간단하게 만들기2 (바로 위) */}
+                    {/* < Card shoes={shoes[0]} />
+                    < Card shoes={shoes[1]} />
+                    < Card shoes={shoes[2]} /> */}
+
+
+                    {/* 아래의 코드를 간단하게 만들기1 (바로 위) */}
+                    {/* <div className="col-md-4">
                         <img src="https://codingapple1.github.io/shop/shoes2.jpg" width="100%" />
                         <h4>{shoes[1].title}</h4>
                         <p>{shoes[1].content} & {shoes[1].price}</p>
@@ -45,11 +59,22 @@ function App() {
                         <img src="https://codingapple1.github.io/shop/shoes3.jpg" width="100%" />
                         <h4>{shoes[2].title}</h4>
                         <p>{shoes[2].content} & {shoes[2].price}</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
         </>
+    )
+}
+
+
+function Card(props) {
+    return (
+        <div className="col-md-4">
+            <img src={'https://codingapple1.github.io/shop/shoes' + (props.i+1) + '.jpg'} width="100%" />
+            <h4>{props.shoes.title}</h4>
+            <p>{props.shoes.content} & {props.shoes.price} </p>
+        </div>
     )
 }
 
@@ -62,3 +87,6 @@ export default App;
 // 여러개의 변수를 내보내고 싶을 경우엔 export 옆 {}안에 변수 명을 모두 작성 {nama1, name2}
 // export 할 때 사용한 변수를 그대로 import 해줘야 함
 // object를 가져올 때는 .을 찍어주면 됨. shoes[0].title
+// 부모 컴포넌트 -> 하위 컴포넌트에게 props로 전송.
+// props로 전송받은 state 들은 props.state 이런식으로 사용
+// 리액트는 서버에서 받아온 데이터를 HTML에 보여주는게 프론트엔드 개발자의 역할
