@@ -66,6 +66,7 @@
         <li>object를 가져올 때는 .을 찍어주면 됨. shoes[0].title</li>
         <li>리액트는 서버에서 받아온 데이터를 HTML에 보여주는게 프론트엔드 개발자의 역할</li>
         <li>데이터 반복문, 축약하는 방법은 코드 안에 주석으로 자세히 설명해 둠</li>
+        <li><Route exact path="/">에서 하나의 페이지만 보여주고 싶을 땐 path앞에 exact</li>
     </ul>
 
 
