@@ -59,6 +59,11 @@
 <h4>Part2 important point</h4>
     <ul>
         <li>코드가 길어질 경우, 파일을 생성해 export로 불어와준다.</li>
+        <li>./ : 현재 경로</li>
+        <li>export default는 한번만 사용가능, 보통 코드 맨 하단에 사용</li>
+        <li>여러개의 변수를 내보내고 싶을 경우엔 export 옆 {}안에 변수 명을 모두 작성 {nama1, name2}</li>
+        <li>export 할 때 사용한 변수를 그대로 import 해줘야 함</li>
+        <li>object를 가져올 때는 .을 찍어주면 됨. shoes[0].title</li>
     </ul>
 
 
