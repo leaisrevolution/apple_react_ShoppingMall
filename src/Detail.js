@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 import styled from 'styled-components';
 import './Detail.scss';
@@ -13,6 +13,13 @@ let minititle = styled.h4 `
 
 
 function Detail (props) {
+
+    useEffect(() => {
+        //2초 후에 alert창을 안보이게 해주세요
+        setTimeout(() => {
+            
+        }, 2000)
+    });
 
     let { id } = useParams();
     let history = useHistory();
@@ -46,3 +53,4 @@ export default Detail;
 //history.push('/'); = 원하는 경로로 이동
 //중요한 데이터는 App()에서 관리하는게 정석
 //useParams 안에는 오브젝트 자료형이 생긴다({}).
+//useEffect는 컴포넌트가 mount 되었을 때, update될 때 특정 코드를 실행할 수 있음

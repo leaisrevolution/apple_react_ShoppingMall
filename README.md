@@ -56,6 +56,9 @@
         <li>Component를 이용한 반복문</li>
         <li>React Router 1</li>
         <li>React Router 2 Link, Switch, history</li>
+        <li>styled-components를 이용한 CSS스타일링</li>
+        <li>SASS 문법 정리</li>
+        <li>useEffect 사용법</li>
     </ul>
 
 <h4>Part2 important point</h4>
@@ -74,6 +77,8 @@
         <li>history.push('/'); = 원하는 경로로 이동</li>
         <li>Switch 중복 매칭을 </li>
         <li>중요한 데이터는 App()에서 관리하는게 정석(국롤) </li>
+        <li>useEffect는 컴포넌트가 mount 되었을 때, update될 때 특정 코드를 실행할 수 있음 </li>
+        <li>useEffect를 특정 코드가 사라질 때 실행하고 싶다면 return 뒤에 코드 작성(unmount) </li>
     </ul>
 
 
