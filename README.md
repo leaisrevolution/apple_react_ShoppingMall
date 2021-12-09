@@ -79,6 +79,9 @@
         <li>중요한 데이터는 App()에서 관리하는게 정석(국롤) </li>
         <li>useEffect는 컴포넌트가 mount 되었을 때, update될 때 특정 코드를 실행할 수 있음 </li>
         <li>useEffect를 특정 코드가 사라질 때 실행하고 싶다면 return 뒤에 코드 작성(unmount) </li>
+        <li>useEffect [] 안에는 useEffect가 실행될 조건을 넣어준다 (state) </li>
+        <li>useEffect [] 안에 넣은 조건이 업데이트될 때만 실행해달라, 안을 비워두면 페이지 로드 됐을 때 1번만 실행 []는 조건문이라고 보면 됨 </li>
+        <li>setTimeout()를 사용할 때 return () => {clearTimeout(timer)}를 할 때 사용해주면 버그를 방지할 수 있다 </li>
     </ul>
 
 
