@@ -1,8 +1,7 @@
-
-
 import React, {useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 import styled from 'styled-components';
+import './Detail.scss';
 
 let box = styled.div`
     padding : 20px;
@@ -19,9 +18,10 @@ function Detail (props) {
     let history = useHistory();
     return (
         <div className="container">
-            <box>
-                <minititle coloring={'red'}>상세페이지</minititle>
-            </box>
+            {/* <box>
+                <minititle className="red">Detail</minititle>
+            </box> */}
+            <div className="my-alert">재고가 얼마 남지 않았습니다.</div>
                     <div className="row">
                         <div className="col-md-6">
                             <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
