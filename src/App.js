@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import Data from './data';
+import Detail from './Detail';
 import { Link, Route, Switch } from 'react-router-dom';
 
 
@@ -16,14 +17,14 @@ function App() {
             <Container>
             <Navbar.Brand href="#home">Lea's Shopping Mall</Navbar.Brand>
             <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">Features</Nav.Link>
+                <Nav.Link> <Link to="/">Home</Link></Nav.Link>
+                <Nav.Link> <Link to="/detail">Detail</Link></Nav.Link>
                 <Nav.Link href="#pricing">Pricing</Nav.Link>
             </Nav>
             </Container>
             </Navbar>
 
-
+        <Switch>
             <Route exact path="/">
                 <div className="jumbotron">
                     <div className="content">
@@ -67,31 +68,24 @@ function App() {
                 </div>
             </Route>
 
-
-
             <Route path="/detail">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
-                        </div>
-                        <div className="col-md-6 mt-4">
-                            <h4 className="pt-5">상품명</h4>
-                            <p>상품설명</p>
-                            <p>120000원</p>
-                            <button className="btn btn-danger">주문하기</button>
-                        </div>
-                    </div>
-                </div>
+                <Detail />
+            </Route>
+
+            <Route path="/:id">
+                <div>아무거나 적을 때 이거 보여주셈</div>
             </Route>
             {/* <Route path="/어쩌구" component={modal}></Route> */}
 
-
+        </Switch>
 
         </>
     )
 }
 
+
+
+// 함수로 컴포넌트화
 
 function Card(props) {
     return (

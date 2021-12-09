@@ -67,6 +67,10 @@
         <li>리액트는 서버에서 받아온 데이터를 HTML에 보여주는게 프론트엔드 개발자의 역할</li>
         <li>데이터 반복문, 축약하는 방법은 코드 안에 주석으로 자세히 설명해 둠</li>
         <li><Route exact path="/">에서 하나의 페이지만 보여주고 싶을 땐 path앞에 exact</li>
+        <li>useHistory = 이동한 URL 페이지를 모든 담은 오브젝트(방문기록)</li>
+        <li>history.goBack(); = 뒤로가기</li>
+        <li>history.push('/'); = 원하는 경로로 이동</li>
+        <li>Switch 중복 매칭을 허용하지 않음</li>
     </ul>
 
 
