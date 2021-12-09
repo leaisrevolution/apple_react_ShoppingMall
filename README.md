@@ -54,6 +54,8 @@
         <li>레이아웃 디자인</li>
         <li>import, export 사용하기</li>
         <li>Component를 이용한 반복문</li>
+        <li>React Router 1</li>
+        <li>React Router 2 Link, Switch, history</li>
     </ul>
 
 <h4>Part2 important point</h4>
@@ -70,7 +72,7 @@
         <li>useHistory = 이동한 URL 페이지를 모든 담은 오브젝트(방문기록)</li>
         <li>history.goBack(); = 뒤로가기</li>
         <li>history.push('/'); = 원하는 경로로 이동</li>
-        <li>Switch 중복 매칭을 허용하지 않음</li>
+        <li>Switch 중복 매칭을 </li>
     </ul>
 
 
