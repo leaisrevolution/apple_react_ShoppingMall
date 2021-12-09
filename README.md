@@ -73,6 +73,7 @@
         <li>history.goBack(); = 뒤로가기</li>
         <li>history.push('/'); = 원하는 경로로 이동</li>
         <li>Switch 중복 매칭을 </li>
+        <li>중요한 데이터는 App()에서 관리하는게 정석(국롤) </li>
     </ul>
 
 

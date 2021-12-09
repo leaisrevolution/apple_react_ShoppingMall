@@ -24,7 +24,7 @@ function App() {
             </Container>
             </Navbar>
 
-        <Switch>
+
             <Route exact path="/">
                 <div className="jumbotron">
                     <div className="content">
@@ -69,15 +69,15 @@ function App() {
             </Route>
 
             <Route path="/detail">
-                <Detail />
+                <Detail shoes={shoes}/>
             </Route>
 
-            <Route path="/:id">
-                <div>아무거나 적을 때 이거 보여주셈</div>
-            </Route>
+            {/* <Route path="/detail/:id">
+                <Detail shoes={shoes}/>
+            </Route> */}
             {/* <Route path="/어쩌구" component={modal}></Route> */}
 
-        </Switch>
+
 
         </>
     )
