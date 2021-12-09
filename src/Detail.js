@@ -2,6 +2,16 @@
 
 import React, {useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
+import styled from 'styled-components';
+
+let box = styled.div`
+    padding : 20px;
+`;
+let minititle = styled.h4 `
+    font-size : 25px;
+    color: ${props => props.coloring}
+`; //스타일링 귀속, 다른 컴포넌트와 스타일링 실수방지
+
 
 function Detail (props) {
 
@@ -9,6 +19,9 @@ function Detail (props) {
     let history = useHistory();
     return (
         <div className="container">
+            <box>
+                <minititle coloring={'red'}>상세페이지</minititle>
+            </box>
                     <div className="row">
                         <div className="col-md-6">
                             <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" />
