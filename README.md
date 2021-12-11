@@ -96,6 +96,11 @@
         <li></li>
     </ul>
 
+<h4>Part3 important point</h4>
+    <ul>
+        <li>React.createContext() : 같은 변수값을 공유할 범위를 생성</li>
+    </ul>
+
 
 
 <h3>Project Issue</h3>

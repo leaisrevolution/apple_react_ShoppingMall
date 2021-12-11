@@ -8,6 +8,7 @@ import Detail from './Detail';
 import { Link, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 
+let stockContext = React.createContext(); //같은 변수값을 공유할 범위를 생성 
 
 function App() {
 
@@ -68,8 +69,6 @@ function App() {
                     </div> */}
                 </div>
                 <button className="btn btn-primary" onClick={() => {
-
-
 
                     axios.get('https://codingapple1.github.io/shop/data2.json') //데이터 요청
                     .then((result) => {
