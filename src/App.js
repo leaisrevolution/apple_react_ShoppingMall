@@ -6,6 +6,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import Data from './data';
 import Detail from './Detail';
 import { Link, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 
 
 function App() {
@@ -65,6 +66,23 @@ function App() {
                         <p>{shoes[2].content} & {shoes[2].price}</p>
                     </div> */}
                 </div>
+                <button className="btn btn-primary" onClick={() => {
+
+                    
+
+                    axios.get('https://codingapple1.github.io/shop/data2.json') //데이터 요청
+                    .then((result) => {
+
+                        console.log(result.data);
+                        setShoes([...shoes, ...result.data]) //카피본
+                    })
+                    .catch(() => {
+
+                        console.log('실패했어요')
+                    })
+
+
+                }}>더보기</button>
                 </div>
             </Route>
 

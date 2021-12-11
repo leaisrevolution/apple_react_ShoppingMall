@@ -58,7 +58,8 @@
         <li>React Router 2 Link, Switch, history</li>
         <li>styled-components를 이용한 CSS스타일링</li>
         <li>SASS 문법 정리</li>
-        <li>useEffect 사용법</li>
+        <li>useEffect</li>
+        <li>Ajax</li>
     </ul>
 
 <h4>Part2 important point</h4>
@@ -82,6 +83,8 @@
         <li>useEffect [] 안에는 useEffect가 실행될 조건을 넣어준다 (state) </li>
         <li>useEffect [] 안에 넣은 조건이 업데이트될 때만 실행해달라, 안을 비워두면 페이지 로드 됐을 때 1번만 실행 []는 조건문이라고 보면 됨 </li>
         <li>setTimeout()를 사용할 때 return () => {clearTimeout(timer)}를 할 때 사용해주면 버그를 방지할 수 있다 </li>
+        <li>Ajax : 서버에 새로고침 없이 요청을 할 수 있게 도와줌 </li>
+        <li>JSON -> 오브젝트X, axios로 JSON을 가져오면 Object로 가져옴 </li>
     </ul>
 
 
