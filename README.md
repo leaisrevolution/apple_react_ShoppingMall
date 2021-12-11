@@ -85,6 +85,7 @@
         <li>setTimeout()를 사용할 때 return () => {clearTimeout(timer)}를 할 때 사용해주면 버그를 방지할 수 있다 </li>
         <li>Ajax : 서버에 새로고침 없이 요청을 할 수 있게 도와줌 </li>
         <li>JSON -> 오브젝트X, axios로 JSON을 가져오면 Object로 가져옴 </li>
+        <li>중요한 데이터는 상위컴포넌트에 보관 </li>
     </ul>
 
 

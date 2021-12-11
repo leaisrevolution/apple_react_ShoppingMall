@@ -12,6 +12,7 @@ import axios from 'axios';
 function App() {
 
     let [shoes, setShoes] = useState(Data); //shoes 안에 Data 컴포넌트를 넣어줌
+    let [stock, setStock] = useState([10, 11, 12]); //중요한 데이터는 상위컴포넌트에 보관
     return (
         <>
             <Navbar bg="dark" variant="dark">
@@ -68,7 +69,7 @@ function App() {
                 </div>
                 <button className="btn btn-primary" onClick={() => {
 
-                    
+
 
                     axios.get('https://codingapple1.github.io/shop/data2.json') //데이터 요청
                     .then((result) => {
@@ -87,7 +88,7 @@ function App() {
             </Route>
 
             <Route path="/detail">
-                <Detail shoes={shoes}/>
+                <Detail shoes={shoes} stock={stock} set={setStock}/>
             </Route>
 
             {/* <Route path="/detail/:id">

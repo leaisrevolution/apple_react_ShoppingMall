@@ -21,7 +21,7 @@ function Detail (props) {
 
     useEffect(() => { //detail 컴포넌트가 등장할 때, 업데이트 될 때,
 
-        axios.get()
+        // axios.get()
         //2초 후에 alert창을 안보이게 해주세요
         let timer = setTimeout(() => {
             setAlert(false)
@@ -57,7 +57,13 @@ function Detail (props) {
                             <h4 className="pt-5">{props.shoes[0].title}</h4>
                             <p>{props.shoes[0].content}</p>
                             <p>{props.shoes[0].price}원</p>
-                            <button className="btn btn-danger">주문하기</button>
+
+                            <Info stock={props.stock} ></Info>
+
+                            <button className="btn btn-danger"
+                                onClick={() => {
+                                    props.setStock([9,11,12])}
+                                }>주문하기</button>
                             &nbsp;
                             {/* <button onClick={()=>{ history.goBack() }} className="btn btn-danger">뒤로가기</button> */}
                         </div>
@@ -65,6 +71,12 @@ function Detail (props) {
                 </div>
     );
 };
+
+function Info(props) {
+    return (
+        <p>재고 : {props.stock[0]}</p>
+    )
+}
 
 export default Detail;
 
