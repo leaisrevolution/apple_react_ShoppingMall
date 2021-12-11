@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 import styled from 'styled-components';
@@ -17,13 +18,16 @@ function Detail (props) {
     let [alert, setAlert] = useState(true);
     let [inputData, setInputData] = useState();
 
-    useEffect(() => {
+
+    useEffect(() => { //detail 컴포넌트가 등장할 때, 업데이트 될 때,
+
+        axios.get()
         //2초 후에 alert창을 안보이게 해주세요
         let timer = setTimeout(() => {
             setAlert(false)
-        }, 3000)
+        }, 2000)
         return () => {clearTimeout(timer)} //사라질 때 Timeout 제거
-    }, [alert]); //[]안에는 useEffect가 실행될 조건을 넣어준다 (state)
+    }, []); //[]안에는 useEffect가 실행될 조건을 넣어준다 (state)
     // 안에 넣은 조건이 업데이트될 때만 실행해달라, 안을 비워두면 페이지 로드 됐을 때 1번만 실행 []는 조건문이라고 보면 됨
 
 
