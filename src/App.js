@@ -8,7 +8,7 @@ import Detail from './Detail';
 import { Link, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 
-let stockContext = React.createContext(); //같은 변수값을 공유할 범위를 생성 
+let stockContext = React.createContext(); //같은 변수값을 공유할 범위를 생성
 
 function App() {
 
@@ -40,49 +40,56 @@ function App() {
                 </div>
 
                 <div className="container">
-                <div className="row">
-                    { //shoes 갯수 만큼 map을 돌려주세요.
-                        shoes.map((a, i)=>{
-                            return <Card shoes={shoes[i]} i={i}/>
+
+                    <stockContext.Provider value={stock}> //공유하고 싶은 데이터 공유
+
+                        <div className="row">
+                            { //shoes 갯수 만큼 map을 돌려주세요.
+                                shoes.map((a, i)=>{
+                                    return <Card shoes={shoes[i]} i={i}/>
+                                })
+                            }
+
+
+
+                        {/* a는 하나하나의 데이터를 의미, i는 반복문 돌 때 0,1,2,3,4 정수 */
+                        /*Card shoes={a} = Card shoes[i] */}
+
+                        {/* 아래의 코드를 간단하게 만들기2 (바로 위) */}
+                        {/* < Card shoes={shoes[0]} />
+                        < Card shoes={shoes[1]} />
+                        < Card shoes={shoes[2]} /> */}
+
+
+                        {/* 아래의 코드를 간단하게 만들기1 (바로 위) */}
+                        {/* <div className="col-md-4">
+                            <img src="https://codingapple1.github.io/shop/shoes2.jpg" width="100%" />
+                            <h4>{shoes[1].title}</h4>
+                            <p>{shoes[1].content} & {shoes[1].price}</p>
+                        </div>
+                        <div className="col-md-4">
+                            <img src="https://codingapple1.github.io/shop/shoes3.jpg" width="100%" />
+                            <h4>{shoes[2].title}</h4>
+                            <p>{shoes[2].content} & {shoes[2].price}</p>
+                        </div> */}
+                        </div>
+
+                    </stockContext.Provider>
+                    <button className="btn btn-primary" onClick={() => {
+
+                        axios.get('https://codingapple1.github.io/shop/data2.json') //데이터 요청
+                        .then((result) => {
+
+                            console.log(result.data);
+                            setShoes([...shoes, ...result.data]) //카피본
                         })
-                    }
+                        .catch(() => {
 
-                    {/* a는 하나하나의 데이터를 의미, i는 반복문 돌 때 0,1,2,3,4 정수 */
-                    /*Card shoes={a} = Card shoes[i] */}
-
-                    {/* 아래의 코드를 간단하게 만들기2 (바로 위) */}
-                    {/* < Card shoes={shoes[0]} />
-                    < Card shoes={shoes[1]} />
-                    < Card shoes={shoes[2]} /> */}
+                            console.log('실패했어요')
+                        })
 
 
-                    {/* 아래의 코드를 간단하게 만들기1 (바로 위) */}
-                    {/* <div className="col-md-4">
-                        <img src="https://codingapple1.github.io/shop/shoes2.jpg" width="100%" />
-                        <h4>{shoes[1].title}</h4>
-                        <p>{shoes[1].content} & {shoes[1].price}</p>
-                    </div>
-                    <div className="col-md-4">
-                        <img src="https://codingapple1.github.io/shop/shoes3.jpg" width="100%" />
-                        <h4>{shoes[2].title}</h4>
-                        <p>{shoes[2].content} & {shoes[2].price}</p>
-                    </div> */}
-                </div>
-                <button className="btn btn-primary" onClick={() => {
-
-                    axios.get('https://codingapple1.github.io/shop/data2.json') //데이터 요청
-                    .then((result) => {
-
-                        console.log(result.data);
-                        setShoes([...shoes, ...result.data]) //카피본
-                    })
-                    .catch(() => {
-
-                        console.log('실패했어요')
-                    })
-
-
-                }}>더보기</button>
+                    }}>더보기</button>
                 </div>
             </Route>
 
